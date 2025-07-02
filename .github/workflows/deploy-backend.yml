@@ -18,5 +18,5 @@ jobs:
         uses: azure/webapps-deploy@v2
         with:
           app-name: remix-backend-luz
-          publish-profile: ${{secrets.AZURE_BACKEND_PUBLISH}}
+          publish-profile: ${{ secrets.AZURE_BACKEND_PUBLISH }}
           package: ./remix-backend
