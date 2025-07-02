@@ -1,0 +1,37 @@
+name: Deploy Frontend to Azure
+
+on:
+  push:
+    paths:
+      - 'remix-frontend/**'
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install Dependencies
+        run: |
+          cd remix-frontend
+          npm install
+
+      - name: Build
+        run: |
+          cd remix-frontend
+          npm run build
+
+      - name: Deploy to Azure Web App
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: remix-frontend-luz
+          publish-profile: ${{ secrets.AZURE_FRONTEND_PUBLISH }}
+          package: ./remix-frontend
