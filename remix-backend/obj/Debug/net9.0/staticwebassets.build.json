@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "tqI7U2BFSCtj+S2EJepTSkAJlR4sj45wFT2HcfXykBc=",
+  "Source": "remix-backend",
+  "BasePath": "_content/remix-backend",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
