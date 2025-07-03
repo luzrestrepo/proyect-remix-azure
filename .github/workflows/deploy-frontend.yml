@@ -19,17 +19,16 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install Dependencies
+      - name: Install Dependencies and Build
         working-directory: remix-frontend
-        run: npm install
-
-      - name: Build
-        working-directory: remix-frontend
-        run: npm run build
+        run: |
+          npm install
+          npm run build
 
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v2
         with:
           app-name: remix-frontend-luz
           publish-profile: ${{ secrets.AZURE_FRONTEND_PUBLISH }}
-          package: remix-frontend/build
+          package: ./remix-frontend
+
