@@ -21,8 +21,8 @@ jobs:
           node-version: 20
 
       - name: Install dependencies and build
-        working-directory: remix-frontend
         run: |
+          cd remix-frontend
           npm install
           npm run build
 
