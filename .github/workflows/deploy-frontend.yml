@@ -35,4 +35,4 @@ jobs:
         with:
           app-name: remix-frontend-luz
           publish-profile: ${{ secrets.AZURE_FRONTEND_PUBLISH }}
-          package: remix-frontend
+          package: remix-frontend/build
