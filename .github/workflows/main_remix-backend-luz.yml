@@ -62,5 +62,5 @@ jobs:
         with:
           app-name: 'remix-backend-luz'
           slot-name: 'Production'
-          package: .
+          package: remix-backend/publish
           
