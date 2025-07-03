@@ -20,6 +20,10 @@ jobs:
         with:
           node-version: 20
 
+      - name: Create .env file with backend URL
+        run: |
+          echo "VITE_BACKEND_API_URL=${{ secrets.VITE_BACKEND_API_URL }}" > remix-frontend/.env
+
       - name: Install dependencies and build
         run: |
           cd remix-frontend
