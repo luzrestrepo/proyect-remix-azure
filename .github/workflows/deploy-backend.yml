@@ -12,11 +12,26 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.0.x' # O la versión que uses
+
+      - name: Build .NET backend
+        working-directory: remix-backend
+        run: dotnet build --configuration Release
+
+      - name: Publish .NET backend
+        working-directory: remix-backend
+        run: dotnet publish -c Release -o publish
 
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v2
         with:
           app-name: remix-backend-luz
           publish-profile: ${{ secrets.AZURE_BACKEND_PUBLISH }}
-          package: ./remix-backend/publish
+          package: remix-backend/publish
+
