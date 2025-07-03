@@ -19,10 +19,11 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install Dependencies
+      - name: Install Dependencies and build
         run: |
           cd remix-frontend
           npm install
+          npm run build
 
       - name: Build
         run: |
@@ -34,4 +35,4 @@ jobs:
         with:
           app-name: remix-frontend-luz
           publish-profile: ${{ secrets.AZURE_FRONTEND_PUBLISH }}
-          package: ./remix-frontend
+          package: ./remix-frontend/build
