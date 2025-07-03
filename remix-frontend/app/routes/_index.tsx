@@ -12,8 +12,10 @@ type Weather = {
   summary: string;
 };
 
+const apiUrl = import.meta.env.VITE_BACKEND_API_URL;
+
 export const loader = async () => {
-  const response = await fetch("http://backend:80/weatherforecast");
+  const response = await fetch(`${apiUrl}`);
   if (!response.ok) {
     throw new Error("Error fetching weather data");
   }
