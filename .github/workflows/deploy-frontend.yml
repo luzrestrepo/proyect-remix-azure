@@ -25,8 +25,8 @@ jobs:
           echo "VITE_BACKEND_API_URL=${{ secrets.VITE_BACKEND_API_URL }}" > remix-frontend/.env
 
       - name: Install dependencies and build
+        working-directory: remix-frontend
         run: |
-          cd remix-frontend
           npm install
           npm run build
 
