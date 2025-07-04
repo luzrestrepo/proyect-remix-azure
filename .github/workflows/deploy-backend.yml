@@ -16,17 +16,21 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Setup .NET
-        uses: actions/setup-dotnet@v3
+        uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '8.0.x' # O la versión que uses
+          dotnet-version: '9.0.x' # O la versión que uses
+
+      - name: Restore .NET backend dependencies
+        working-directory: remix-backend
+        run: dotnet restore
 
       - name: Build .NET backend
         working-directory: remix-backend
-        run: dotnet build --configuration Release
+        run: dotnet build --configuration Release --no-restore
 
       - name: Publish .NET backend
         working-directory: remix-backend
-        run: dotnet publish -c Release -o publish
+        run: dotnet publish --configuration Release --output ./publish --no-build
 
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v2
