@@ -41,7 +41,7 @@ export default function Index() {
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Weather Forecast App
           </h1>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-gray-500">
             Your best 5-day weather outlook
           </p>
         </div>
