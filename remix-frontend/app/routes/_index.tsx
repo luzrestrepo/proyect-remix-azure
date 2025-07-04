@@ -14,8 +14,10 @@ type Weather = {
 
 const apiUrl = import.meta.env.VITE_BACKEND_API_URL 
   || import.meta.env.VITE_BACKEND_API_URL_LOCAL;
+
+
 export const loader = async () => {
-  const response = await fetch(`${apiUrl}/endpoint`);
+  const response = await fetch(`${apiUrl}`);
   if (!response.ok) {
     throw new Error("Error fetching weather data");
   }
