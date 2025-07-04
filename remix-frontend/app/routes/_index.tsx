@@ -12,10 +12,8 @@ type Weather = {
   summary: string;
 };
 
-const apiUrl = import.meta.env.MODE === "development"
-  ? import.meta.env.VITE_BACKEND_API_URL_LOCAL
-  : import.meta.env.VITE_BACKEND_API_URL;
-
+const apiUrl = import.meta.env.VITE_BACKEND_API_URL 
+  || import.meta.env.VITE_BACKEND_API_URL_LOCAL;
 export const loader = async () => {
   const response = await fetch(`${apiUrl}/endpoint`);
   if (!response.ok) {
