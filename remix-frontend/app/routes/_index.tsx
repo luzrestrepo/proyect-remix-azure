@@ -39,7 +39,7 @@ export default function Index() {
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Weather Forecast
+            Weather Forecast App
           </h1>
           <p className="text-lg text-gray-600">
             Your 5-day weather outlook
