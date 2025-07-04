@@ -42,7 +42,7 @@ export default function Index() {
             Weather Forecast App
           </h1>
           <p className="text-lg text-gray-600">
-            Your 5-day weather outlook
+            Your best 5-day weather outlook
           </p>
         </div>
 
