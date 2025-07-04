@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("remix-backend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+43248cd37badc188d4bd9c3f3395f839c375e0fd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bad0da1c7b534211cabefa77e2bc2cb319ead9bd")]
 [assembly: System.Reflection.AssemblyProductAttribute("remix-backend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("remix-backend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
