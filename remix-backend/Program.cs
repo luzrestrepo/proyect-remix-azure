@@ -1,12 +1,6 @@
 var builder = WebApplication.CreateBuilder(args);
 
-/* // 👇 Agregado para exponer puerto 80
-builder.WebHost.ConfigureKestrel(serverOptions =>
-{
-    serverOptions.ListenAnyIP(80);
-});
- */
-// Add services to the container.
+
 builder.Services.AddOpenApi();
 
 var app = builder.Build();
