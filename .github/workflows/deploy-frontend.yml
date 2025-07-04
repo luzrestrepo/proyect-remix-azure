@@ -41,6 +41,6 @@ jobs:
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v2
         with:
-          app-name: remix-frontend-luz
+          app-name: WeatherForecastAppLuzFrontend
           publish-profile: ${{ secrets.AZURE_FRONTEND_PUBLISH }}
           package: remix-frontend/app.zip
