@@ -17,7 +17,7 @@ const apiUrl = import.meta.env.VITE_BACKEND_API_URL
 
 
 export const loader = async () => {
-  const response = await fetch(`${apiUrl}`);
+  const response = await fetch(`https://weatherforecastappluzbackend.azurewebsites.net/weatherforecast`);
   if (!response.ok) {
     throw new Error("Error fetching weather data");
   }
