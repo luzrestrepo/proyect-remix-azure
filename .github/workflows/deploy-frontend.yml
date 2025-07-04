@@ -31,6 +31,7 @@ jobs:
           npm run build
 
       - name: Prepare ZIP artifact
+        working-directory: remix-frontend
         run: |
           mkdir deployment
           cp -r build public package.json package-lock.json node_modules deployment/
